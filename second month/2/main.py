@@ -67,6 +67,8 @@
 # numbers = input("add the number n :: ")
 # print(numbers[::-1])
 # 8
+from random import randint, random
+from wsgiref.util import application_uri
 
 # arr = [4,5,7,8,6,9]
 # arr_2 = []
@@ -107,4 +109,18 @@
 #         n_1 = n_1[::-1]
 # print(f"{arr_2}{n_1}")
 
-# 19
+# # 18
+# numbers = int(input("add the numbers :: "))
+# numbers = list(range(1,numbers+1))
+# print(numbers[0])
+# # 19
+# 20
+numbers = int(input("add the number :; "))
+k = int(input("add the number k  :; "))
+l = int(input("add the number l :; "))
+arr = range(numbers)
+if 0 <= k <= l <= numbers:
+    k = arr.index(k)
+    l = arr.index(l)
+else:
+    pass
