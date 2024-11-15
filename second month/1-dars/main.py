@@ -36,5 +36,39 @@
 #     else:
 #         pass
 #     print(r)
+# #
+# #
 #
+# numbers = int(input("add the numbers:: "))
+# arr = range(1,numbers+1)
+# counts = 0
+# for i in arr:
+#     if 3 in 13:
+#         print("hello")
+from tkinter.font import names
+
+# numbers = int(input("add the numbers:: "))
+# arr = []
+# if numbers <= 10:
+#     for i in range(1,numbers+1):
+#         if i % 2 == 0:
+#             arr.append(i)
+#         else:
+#             pass
+# else:
+#     print("place use only number over 10")
 #
+# print(arr)
+
+
+# # 1.
+# numbers = int(input("add the number place:: "))
+# arr = range(1,numbers+1)
+# arr = list(arr)
+# arr_1 = []
+# for i in range(1,numbers+1):
+#     if i % 2 == 0:
+#         arr_1 = arr.extend(i)
+#     else:
+#         pass
+# print(arr_1)
