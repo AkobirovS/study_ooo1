@@ -67,8 +67,7 @@
 # numbers = input("add the number n :: ")
 # print(numbers[::-1])
 # 8
-from random import randint, random
-from wsgiref.util import application_uri
+from traceback import walk_stack
 
 # arr = [4,5,7,8,6,9]
 # arr_2 = []
@@ -115,12 +114,47 @@ from wsgiref.util import application_uri
 # print(numbers[0])
 # # 19
 # 20
-numbers = int(input("add the number :; "))
-k = int(input("add the number k  :; "))
-l = int(input("add the number l :; "))
-arr = range(numbers)
-if 0 <= k <= l <= numbers:
-    k = arr.index(k)
-    l = arr.index(l)
-else:
-    pass
+# numbers = int(input("add the number :; "))
+# k = int(input("add the number k  :; "))
+# l = int(input("add the number l :; "))
+# arr = list(range(numbers))
+# numbers_2 = 0
+# if 0 <= k <= l <= numbers:
+#     k = arr.index(k)
+#     l = arr.index(l)
+#     arr = arr[k:l]
+#     for i in arr:
+#         numbers_2+=i
+# else:
+#     pass
+# print(numbers_2)
+# # 21
+# nummber_1 = int(input("add the numbers :: "))
+# k = int(input("add the numbers k :: "))
+# l = int(input("add the numbers l :: "))
+# if 0 <= k <= l <= nummber_1:
+#     arr = list(range(k-1,l-1))
+#     nummber_1 = 0
+#     for i in arr:
+#         nummber_1 += i
+#     nummber_1 = nummber_1 // (l-k)
+# else:
+#     pass
+# print(nummber_1)
+
+
+numbers = int(input("add the numbers :: "))
+numbers_1 = 0
+k = int(input("add the numbers k :: "))
+l = int(input("add the numbers l :: "))
+arr = list(range(1,numbers+1))
+arr_1 = []
+if 0 <= l <= k <= numbers:
+    for i in arr:
+        if i != k and i != l:
+            arr_1.append(i)
+        else:
+            pass
+    for i in arr_1:
+        numbers_1 = numbers_1 + i
+print(numbers_1)
