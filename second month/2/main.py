@@ -235,6 +235,8 @@
 # # #     print("not")
 # arr = [2,3,4,5,6,7]
 # lens = len(arr)
+
+# 27
 # counts = 0
 # while lens > counts:
 #     if arr[counts] % 2 == 0 and arr[lens-2] % 2 == 0:
@@ -244,3 +246,50 @@
 #     else:
 #         print(0)
 #     counts += 2
+# # 28
+# n = int(input("add the numbers : "))
+# arr = range(1,n+1)
+# arr_2 = []
+# counts = 0
+# while counts < n:
+#     if arr.index(arr[counts]) % 2 == 0:
+#         arr_2.append(arr.index(arr[counts]))
+#     else:
+#         pass
+#     counts += 1
+# print(min(arr_2))
+# # 29
+# n = int(input("add the numbers : "))
+# arr = range(1,n+1)
+# arr_2 = []
+# counts = 0
+# while counts < n:
+#     if arr.index(arr[counts]) % 2 == 0:
+#         pass
+#     else:
+#         arr_2.append(arr.index(arr[counts]))
+#     counts += 1
+# print(max(arr_2))
+# 30
+# import random
+# n = int(input("add the numbers:: "))
+# arr = []
+# counts_2 = 0
+# while n > counts_2:
+#     arr.append(random.randint(1,9))
+#     counts_2+=1
+# counts = 1
+# print(arr)
+# for i in arr:
+#     if i > arr[counts]:
+#         print(i)
+#     else:
+#         pass
+#     counts +=1
+# 51
+n = int(input("add the numbers :: "))
+arr_1 = [1,2,3,4,5]
+arr_2 = [2,3,4,5,6,7]
+arr_3 = arr_1,arr_2
+del arr_1[:]
+arr_1.append(arr_3[1])
