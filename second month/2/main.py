@@ -67,6 +67,7 @@
 # numbers = input("add the number n :: ")
 # print(numbers[::-1])
 # 8
+from unittest.mock import right
 
 # arr = [4,5,7,8,6,9]
 # arr_2 = []
@@ -150,19 +151,17 @@
 # total_sum = sum(arr[:k]) + sum(arr[l:])
 # print(total_sum)
 
-# 23
-# 00000 "I cant "
-# numbers = int(input("add the numbers :: "))
-# numbers_1 = 0
-# k = int(input("add the numbers k :: "))
-# l = int(input("add the numbers l :: "))
-# arr = list(range(1,numbers+1))
-# arr_2 = []
-# arr_3 = list(range(1,k))
-# arr_4 = list(range(l+1,numbers))
-# arr_2.append(arr_3)
-# arr_2.append(arr_4)
-# print(arr_2)
+# # 23
+# import random
+# n = int(input("add the number :: "))
+# nn = []
+# k = int(input("K indeksni kiriting :: "))
+# l = int(input("L indeksni kiriting :: "))
+# for i in range(n):
+#     nn.append(random.randint(1, 9))
+# print(nn)
+# result = (sum(nn[:k]) + sum(nn[l+1:])) / ((len(nn[:k]) + len(nn[l+1:])))
+# print(result)
 
 # # 24
 # number = [2,5,8,11,14]
@@ -236,7 +235,7 @@
 # arr = [2,3,4,5,6,7]
 # lens = len(arr)
 
-# 27
+# 27000
 # counts = 0
 # while lens > counts:
 #     if arr[counts] % 2 == 0 and arr[lens-2] % 2 == 0:
@@ -246,7 +245,24 @@
 #     else:
 #         print(0)
 #     counts += 2
-# # 28
+# # 27
+# import random
+# num = [-1,1,-2,2]
+# number = int(input("add the number "))
+# # for i in range(number):
+# #     num.append(random.randint(1, 9))
+# # print(num)
+# counts = 0
+# while counts < len(num)//2:
+#     if counts % 2 != 0:
+#         if (num[counts] < 0) and (num[counts + 1] > 0):
+#             print('hello')
+#         else:
+#             print(num[counts +1])
+#     else:
+#         pass
+#     counts += 1
+# # # 28
 # n = int(input("add the numbers : "))
 # arr = range(1,n+1)
 # arr_2 = []
@@ -286,10 +302,25 @@
 #     else:
 #         pass
 #     counts +=1
-# 51
-n = int(input("add the numbers :: "))
-arr_1 = [1,2,3,4,5]
-arr_2 = [2,3,4,5,6,7]
-arr_3 = arr_1,arr_2
-del arr_1[:]
-arr_1.append(arr_3[1])
+# # 51
+# n = int(input("add the numbers :: "))
+# arr_1 = [1,2,3,4,5]
+# arr_2 = [2,3,4,5,6,7]
+# arr_3 = arr_1,arr_2
+# arr_1.append(arr_3[1])
+# arr_2.append(arr_3[0])
+# del arr_1[:arr_1.index(arr_3[1])]
+# del arr_2[0]
+#
+# print(arr_1,arr_2,sep="         ")
+
+# enter = "are you redy :: "
+# low = 0
+# rigth = 100
+# while low < rigth:
+#     mid = (low + rigth) // 2
+#     ask = input(f"i think it is {mid} b or s == ")
+#     if ask == "s":
+#         low = mid - rigth
+#     elif ask == "b":
+#         rigth = mid + rigth
