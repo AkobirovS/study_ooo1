@@ -22,18 +22,16 @@
 # l = len(strs)
 # print(arr[l:])
 
-# 4
-str = list(input("add the voise :: ").lower())
-str = sorted(str)
-print(str)
-
-
-
-
-
-
-
-
+# # 4
+# str = list(input("add the voise :: ").lower())
+# str = sorted(str)
+# for
+# 5
+# arr = ["sardor","alixon","faruh"]
+# str = ""
+# for i in arr:
+#     str += f"hello {i} "
+# print(str)
 #
 # n = list(map(int, input("Sonlarni vergul bilan ajratib kiriting: ").split(',')))
 #
