@@ -87,16 +87,126 @@
 # print(f"answer :: {result:.2f}")
 #
 # 7
-num = [1, 2, 3, 4, 5, 6]
+# num = list(map(int,input("add the numbers")))
+#
+# x = 0
+#
+# for i in range(len(num)):
+#     for j in range(i + 1, len(num)):
+#         for k in range(j + 1, len(num)):
+#             if num[i] + num[j] + num[k] == 10:
+#                 print((num[i], num[j], num[k]))
+#                 x += 1
+#
+# print(f"tens: {x}")
+#
 
-x = 0
 
-for i in range(len(num)):
-    for j in range(i + 1, len(num)):
-        for k in range(j + 1, len(num)):
-            if num[i] + num[j] + num[k] == 10:
-                print((num[i], num[j], num[k]))
-                x += 1
 
-print(f"tens: {x}")
 
+
+
+
+
+
+
+
+# # 50
+# import random
+# from operator import ifloordiv
+#
+# number = int(input("add the number len ::: "))
+# arr = []
+# for i in range(1,number+1):
+#     x = random.randint(1,9)
+#     arr.append(x)
+# arr_2 = []
+# for i in range(1,number+1):
+#     x = random.randint(1,9)
+#     arr_2.append(x)
+# print(arr,arr_2)
+# f = arr.copy()
+# x = arr_2.copy()
+# del arr[:]
+# del arr_2[:]
+# arr_2.append(f)
+# arr.append(x)
+# print(arr,arr_2)
+# 52
+# import random
+# number = int(input("add the numbers :: "))
+# arr = []
+# for i in range(1,number+1):
+#     x = random.randint(1,9)
+#     arr.append(x)
+# arr_2 = []
+# for i in range(1,number+1):
+#     x = random.randint(1,9)
+#     arr_2.append(x)
+# print(arr,arr_2)
+# counts = 0
+# while counts < number:
+#     if arr[counts] < 5:
+#         arr_2[counts] = 2*arr[counts]
+#     else:
+#         arr_2[counts] = arr[counts]/2
+#     counts+=1
+# print(arr_2)
+# 53
+# import random
+# numbers = int(input("add the number for len :: "))
+# a = []
+# b = []
+# c = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+#     b.append(random.randint(1,9))
+# print(a,b)
+# counts = 0
+# while numbers > counts:
+#     c.append(max(a[counts],b[counts]))
+#     counts +=1
+# print(c)
+# 54
+# import random
+# numbers = int(input("add the numbers for len :: "))
+# a = []
+# b = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+# counts = 0
+# while counts < numbers:
+#     while counts % 2 == 0:
+#         b.append(a[counts])
+#         break
+#     counts += 1
+# print(a,b,sep="\n")
+# none
+# 55
+# import random
+# numbers = int(input("add the numbers for len :: "))
+# a = []
+# b = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+# counts = 0
+# while counts < numbers:
+#     while counts % 2 != 0:
+#         b.append(a[counts])
+#         break
+#     counts += 1
+# print(a,b,sep="\n")
+# # 56
+# import random
+# numbers = int(input("add the numbers for len :: "))
+# a = []
+# b = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+# counts = 0
+# while counts < numbers:
+#     counts += 1
+#     while counts % 3 == 0:
+#         b.append(a[counts])
+#         break
+# print(a,b,sep="\n")
