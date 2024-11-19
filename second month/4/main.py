@@ -210,3 +210,43 @@
 #         b.append(a[counts])
 #         break
 # print(a,b,sep="\n")
+# 57
+# import random
+# numbers = int(input("add the numbers for len :: "))
+# a = []
+# b = []
+# c = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+# counts = 0
+# while counts < numbers:
+#     while a[counts] % 2 == 0:
+#         b.insert(0,a[counts])
+#         break
+#     while a[counts] % 2 != 0:
+#         b.insert(len(a),a[counts])
+#         break
+#     counts += 1
+# print(a,b,sep="\n")
+# 58
+# import random
+# numbers = int(input("add the number about n "))
+# a = []
+# b = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+#     b.append(random.randint(1,9))
+# for i in b:
+#     b[b.index(i)] = a[0]+a[b.index(i)]
+# print(b,a,sep="\n")
+# # 59
+# import random
+# numbers = int(input("add the number about n "))
+# a = []
+# b = []
+# for i in range(numbers):
+#     a.append(random.randint(1,9))
+#     b.append(random.randint(1,9))
+# for i in b:
+#     b[b.index(i)] = (a[0] + a[b.index(i)]) / i
+# print(a,b,sep="\n")
