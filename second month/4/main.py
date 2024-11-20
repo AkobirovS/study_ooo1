@@ -319,23 +319,38 @@
 #     else:
 #         pass
 #     counts+=1
-# 68 000 can't
+# # 68
 # import random
-# numbers = int(input("add the numbers :"))
+#
+# number = int(input("add the number ::"))
 # a = []
-# for i in range(numbers):
+# for i in range(number):
 #     a.append(random.randint(1,9))
-# m = max(a)
-# mi = min(a)
 # print(a)
-# for i in a:
-#     if i == m:
-#         a[a.index(i)] = mi
-#     elif i == mi:
-#         a[a.index(i)] = m
-#         break
-#     else:
-#         pass
+# maxs = max(a)
+# mins = max(a)
+# maxsi = a.index(max(a))
+# minsi = a.index(min(a))
+#
+# a[minsi] ,a[maxsi] = maxs,minsi
+# print(a)
+# # 69 ????
+# import random
+#
+# number = int(input("add the number ::"))
+# if number % 2 == 0:
+#     a = []
+#     for i in range(number):
+#         a.append(random.randint(1, 9))
+#     print(a)
+#     counts = 0
+#     countsl = 0
+#     while counts < len(a):
+#         a[counts] = a[countsl]
+#         counts  += 1
+#     print(a)
+# else:
+#     print("errore")
 # # print(a)
 # name = list(input("yuor name :: "))
 # counts = 0
@@ -345,6 +360,143 @@
 #     print("".join(s),sep="")
 #     s = name[counts:len(name)] + name[:counts]
 #     counts+=1
-
+# 70
+# import random
+#
+# number = int(input("add the number ::"))
+# if number % 2 == 0:
+#     a = []
+#     for i in range(number):
+#         a.append(random.randint(1, 9))
+#     print(a)
+#     a_1 = (number//2)
+#     a = a[a_1:] + a[:a_1]
+#     print(a)
+# else:
+#     print("errore")
+# print(a)
 # 71
-
+# numbers = list(map(int, input()))
+# counts = len(numbers)-1
+# x = []
+# while counts >= 0:
+#     x.append(numbers[counts])
+#     counts-=1
+# numbers = x
+# print(numbers)
+# # 72
+# import random
+# numbers = int(input("add the numbers :: "))
+# a = []
+# counts = 0
+# k = int(input("add the k"))
+# h = int(input("add the h"))
+# if 1 <= k < h <= numbers:
+#     for i in range(numbers):
+#         a.append(random.randint(1,9))
+#     while counts < numbers :
+#         if k == counts:
+#              k = counts-1
+#         elif h == counts:
+#              h = counts
+#         else:
+#             pass
+#         counts+=1
+#     print(a)
+#     a = a[k:h]
+#     counts = 0
+#     while len(a) > counts:
+#         a[counts] = (k+h)
+#         counts+=1
+#     print(a)
+#
+# else:
+#     print("add the correct k and h")
+# 73
+## numbers = list(map(int, input()))
+# counts = len(numbers)-1
+# x = []
+# while counts >= 0:
+#     x.append(numbers[counts])
+#     counts-=1
+# numbers = x
+# print(numbers)
+# # 72
+# import random
+# numbers = int(input("add the numbers :: "))
+# a = []
+# counts = 0
+# k = int(input("add the k"))
+# h = int(input("add the h"))
+# if 1 <= k < h <= numbers:
+#     for i in range(numbers):
+#         a.append(random.randint(1,9))
+#     while counts < numbers :
+#         if k == counts:
+#              k = counts-1
+#         elif h == counts:
+#              h = counts
+#         else:
+#             pass
+#         counts+=1
+#     print(a)
+#     a = a[k:h]
+#     counts = 0
+#     while len(a) > counts:
+#         a[counts] = a[5]
+#         counts+=1
+#     print(a)
+#
+# else:
+#     print("add the correct k and h")
+# 74
+# import random
+# numbers = int(input("add the numbers :: "))
+# a = []
+# counts = 0
+# k = int(input("add the k"))
+# h = int(input("add the h"))
+# if 1 <= k < h <= numbers:
+#     for i in range(numbers):
+#         a.append(random.randint(1,9))
+#     while counts < numbers :
+#         if k == counts:
+#              k = counts-1
+#         elif h == counts:
+#              h = counts
+#         else:
+#             pass
+#         counts+=1
+#     print(a)
+#     a = a[k:h]
+#     counts = 0
+#     while len(a) > counts:
+#         if a[counts] != max(a):
+#             pass
+#         elif a[counts] != min(a):
+#             pass
+#         else:
+#             a[counts] = a[5]
+#         counts += 1
+#     print(a)
+#
+# else:
+#     print("add the correct k and h")
+#
+# # 75
+# import random
+#
+# n = int(input("add the number len :; "))
+# a = []
+# for i in range(n):
+#     a.append(random.randint(1,9))
+# print(a)
+# maxs = a.index(max(a))
+# mins = a.index(min(a))
+# x = a[mins:maxs]
+# print(mins,maxs)
+# counts = 0
+# while counts < len(x):
+#     print(x[-counts])
+#     counts+=1
+# print(x)
