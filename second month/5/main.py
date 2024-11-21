@@ -67,3 +67,34 @@
 #     x = name[counts:] + name[:counts]
 #     print("".join(x))
 #     counts+=1
+# # 7
+# number = list(map(int , input("add the number after 3 put ' '").split(" ")))
+# counts = 0
+# counts_2 = 0
+# for i in number:
+#     counts_2 = number[counts]
+#     counts_2 = [int(i) for i in counts_2]
+#     print(counts_2)
+#
+# 7
+# number = list(map(int , input("add the number after 3 put ' '").split(" ")))
+# if len(number) != 9:
+#     print("errore")
+# else:
+#     matrix = [number[:3],number[3:6],number[6:9]]
+#     d = sum(matrix[i][i] for i in range(3))
+#     print(d)
+#
+# number = list(map(int , input("add the number after 3 put ' '").split(" ")))
+# if len(number) == 5:
+#     for i in number:
+#         if i == 1:
+#             print("one")
+#         elif i == 2:
+#             print("two")
+#         elif i == 3:
+#             print("three")
+#         elif i == 4:
+#             print("four")
+#         elif i == 5:
+#             print("five")
