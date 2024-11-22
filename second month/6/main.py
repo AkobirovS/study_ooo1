@@ -79,3 +79,35 @@
 #
 # print(apple, fruit, sep="\n")
 #
+#
+# user = {
+#     "location": {
+#         "country": "Uzbekistan",
+#         "city": ""
+#     }
+# }
+#
+# print(user["location"]["country"])
+
+# print(fruit.items())
+# for key, value in fruit.items():
+#     print(f"{key}: {value}")
+
+user = {
+    "name": "Dilshod",
+    "lastname": "Murtazoyev",
+    "age": 25,
+    "gender": "M",
+    "job": "Engineer",
+    "email": "dilshod@gmail.com",
+    "phone": "+1 9876543210",
+    "skills": ["python", "javascript", "HTML", "CSS", "ReactJS", "NodeJS", "NextJS"],
+    "isMarred": True,
+}
+
+
+user.setdefault("age", 28)
+
+user["isMarred"] = False
+
+print("\n".join([f"{key}: {value}" for key, value in user.items()]))
