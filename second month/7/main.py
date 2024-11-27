@@ -57,6 +57,7 @@
 # powerA3(d)
 # powerA3(e)
 import math
+from idlelib.colorizer import prog_group_name_to_tag
 
 
 # 2
@@ -248,8 +249,121 @@ import math
 #     a = abs(a - b)
 #     print(a)
 # krig_2(5,3)
-#
+#20
 # def tri_ugle(a,b):
 #     c = math.sqrt((math.pow(a,2))+(math.pow(b,2)))
 #     print(a+b+c)
 # tri_ugle(3,4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 21?
+# l_1 = input("add the ::")
+# l_2 = input("add the ::")
+# l_1 = list(l_1)
+# l_2 = list(l_2)
+# l_1 = [int(i) for i in l_1]
+# l_2 = [int(i) for i in l_2]
+# print(l_1)
+# print(l_2)
+# def sum_list(a,b):
+#     a = a[::-1]
+#     b = b[::-1]
+#     a = [str(i) for i in a]
+#     b = [str(i) for i in b]
+#     a = "".join(a)
+#     b = "".join(b)
+#     a = int(a)
+#     b = int(b)
+#     print(a)
+#     print(b)
+#     n = a+b
+#     n = str(n)
+#     n = list(n)
+#     n = [int(i) for i in n]
+#     print(n[::-1])
+# sum_list(l_1,l_2)
+
+
+# 21
+#
+# def sum_range(a,b):
+#     if a > b :
+#         return 0
+#     else:
+#         c = 0
+#         for i in range(a,b+1):
+#             c+=i
+#         print(c)
+# sum_range(1,10)
+# 22
+# def cal_c(a,b,c):
+#     if c == 1:
+#         print(a-b)
+#     elif c == 2:
+#         print(a*b)
+#     elif c == 3:
+#         print(a/b)
+#
+# 23???
+# 24
+# def even_k(a):
+#     if a % 2 == 0:
+#         print("even")
+#     else:
+#         print("not even :::")
+# even_k(3)
+# even_k(5)
+# even_k(4)
+# 25
+# def is_square(a):
+#     print(a)
+#     a = math.sqrt(a)
+#     print(a)
+#     if a % 2 == 0:
+#         print("even")
+#     else:
+#         print("is not even")
+# is_square(64)
+# is_square(9)
+# is_square(4)
+# 26??
+# 27??
+# 28
+# def is_power(a):
+#     if a == 2:
+#         print(a)
+#     elif a % 2 != 0:
+#         print(a)
+#     else:
+#         print("hello")
+# is_power(6)
+# is_power(5)
+# is_power(2)
+# 29
+# def digit_count(a):
+#     l = []
+#
+# digit_count(234)

@@ -1,16 +1,16 @@
-# # # 1
-# # arr = input("add the number by ' ': ")
-# # by = [int(arr) for arr in arr.split()]
-# # answer = []
-# # for i in range(len(by)):
-# #     sums = 0
-# #     for j in range(len(by)):
-# #         if i != j:
-# #             sums += by[j]
-# #     answer.append(sums)
-# #
-# # print(f"answer :: {answer}")
-#
+# 1
+arr = input("add the number by ' ': ")
+by = [float(arr) for arr in arr.split()]
+answer = []
+for i in range(len(by)):
+    sums = 0
+    for j in range(len(by)):
+        if i != j:
+            sums += by[j]
+    answer.append(sums)
+
+print(f"answer :: {answer}")
+
 #
 # # # 2
 # # strs_1 = input("add the string:: ")
