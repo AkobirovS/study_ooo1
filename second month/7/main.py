@@ -143,10 +143,113 @@ import math
 #         pass
 # add_left_digit(b,c)
 # 10
-def s_wap(a,b,c,d):
-    ab = a+b
-    cd = c+d
-    print(ab,cd)
-    cd,ab = ab,cd
-    print(ab,cd)
-s_wap(10,23,4,5)
+# def s_wap(a,b,c,d):
+#     ab = a+b
+#     cd = c+d
+#     print(ab,cd)
+#     cd,ab = ab,cd
+#     print(ab,cd)
+# s_wap(10,23,4,5)
+# 11
+# def minmax(x,i):
+#     m = max(x,i)
+#     print(x,i ,sep=" wos ")
+#     if x == x:
+#         i,x = x,i
+#     else:
+#         x,i = i,x
+#     print(x,i,sep=" be ")
+#
+# for i in range(4):
+#     inp = int(input("add the nambers a :: "))
+#     inp_2 = int(input("add the nambers b :: "))
+#     minmax(inp,inp_2)
+# # 12
+# def sort_ins(a,b,c):
+#     print(f"a == {a},\nb == {b},\nc == {c}")
+#     s = sorted([a,b,c])
+#     c = s[len(s)-1]
+#     a = s[0]
+#     b = s[1]
+#     print(" new ")
+#     print(f"a == {a},\nb == {b},\nc == {c}")
+# for i in range(3):
+#     n = int(input("add the a ::"))
+#     n_2 = int(input("add the b ::"))
+#     n_3 = int(input("add the c ::"))
+#     sort_ins(n,n_2,n_3)
+# 13
+# def sort_ins(a,b,c):
+#     print(f"a == {a},\nb == {b},\nc == {c}")
+#     s = sorted([a,b,c])
+#     a = s[len(s)-1]
+#     c = s[0]
+#     b = s[1]
+#     print(f"a == {a},\nb == {b},\nc == {c}")
+# for i in range(3):
+#     n = int(input("add the a ::"))
+#     n_2 = int(input("add the b ::"))
+#     n_3 = int(input("add the c ::"))
+#     sort_ins(n,n_2,n_3)
+# # 14
+# def shift_right(a,b,c):
+#     print(f"a == {a}\nb == {b}\nc == {c}")
+#     print("   now   ")
+#     a,b,c = c,a,b
+#     print(f"a == {a}\nb == {b}\nc == {c}")
+#
+#
+# for i in range(2):
+#     n = int(input("Add the a number :: "))
+#     n_2 = int(input("Add the b number :: "))
+#     n_3 = int(input("Add the c number :: "))
+#     shift_right(n,n_2,n_3)
+# # 15
+# def shift_right(a,b,c):
+#     print(f"a == {a}\nb == {b}\nc == {c}")
+#     print("   now   ")
+#     b,a,c = c,b,a
+#     print(f"a == {a}\nb == {b}\nc == {c}")
+#
+#
+# for i in range(2):
+#     n = int(input("Add the a number :: "))
+#     n_2 = int(input("Add the b number :: "))
+#     n_3 = int(input("Add the c number :: "))
+#     shift_right(n,n_2,n_3)
+# 16
+# def hakikiy(a):
+#     if 0 < a:
+#         return 1
+#     elif a < 0:
+#         return -1
+#     else:
+#         return 0
+#
+# for i in range(2):
+#     n = int(input("add the numbers :: "))
+#     print(hakikiy(n))
+# # 17
+# def kor_kod(a,b,c):
+#     return f"d = {(b**2)-(4*a*c)}"
+# for i in range(2):
+#     n = int(input("Add the a number :: "))
+#     n_2 = int(input("Add the b number :: "))
+#     n_3 = int(input("Add the c number :: "))
+#     print(kor_kod(n,n_2,n_3))
+# 18
+# def krig(a):
+#     print(math.pi * (math.pow(a,2)))
+# krig(3)
+# # 19
+# def krig_2(a,b):
+#     a = math.pi * (math.pow(a, 2))
+#     b = math.pi * (math.pow(b,2))
+#     a = abs(a - b)
+#     print(a)
+# krig_2(5,3)
+#
+# def tri_ugle(a,b):
+#     c = math.sqrt((math.pow(a,2))+(math.pow(b,2)))
+#     print(a+b+c)
+# tri_ugle(3,4)
