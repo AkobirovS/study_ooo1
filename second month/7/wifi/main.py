@@ -62,3 +62,16 @@
 #         v = roman_map.values()
 #
 # romanToInt(s)
+# strs = ["dog","racecar","car"]
+# if len(strs) != 0:
+#     strs_3 = strs[0]
+#     for i in strs[1:]:
+#         if i.startswith(strs_3):
+#             print(strs_3)
+#                 # return strs_3
+#         else:
+#             strs_3 = strs_3[:-1]
+#             print(strs_3)
+#             print(strs)
+# else:
+#     print("hhell")
