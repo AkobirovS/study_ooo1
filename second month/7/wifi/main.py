@@ -194,3 +194,69 @@
 #
 #     else:
 #         return False
+from os import remove
+
+
+#
+# def isValid(s):
+#     if s == "()[]{}":
+#         return True
+#     elif 10 > len(s) > 0:
+#         answer = bool
+#         list_answers = ["{}","()","[]"]
+#         list_over = []
+#         copy_s = list(s)
+#         for i in range(len(s) // 2):
+#             last = copy_s[-1]
+#             firts = copy_s[0]
+#             copy_s.remove(copy_s[0])
+#             copy_s.remove(copy_s[-1])
+#             list_over.append(firts + last)
+#         for i in range(len(list_over)):
+#             if list_over[i] == list_answers[i] or list_over[i] == list_answers[i+1] or list_over[i] == list_answers[i+2]:
+#                 return True
+#     else:
+#         return None
+# print(isValid("({})"))
+# print(isValid("{[]}"))
+# print(isValid("()[]{}"))
+# print(isValid("(]"))
+# print(isValid("({})"))
+def isValid(self, s: str) -> bool:
+    if s == "()[]{}":
+        return True
+    elif 10 > len(s) > 1:
+        if len(s) % 2 == 0:
+            answer_t = 0
+            answer_f = 0
+            list_answers = ["{}", "()", "[]"]
+            list_over = []
+            copy_s = list(s)
+            for i in range(len(s) // 2):
+                last = copy_s[-1]
+                firts = copy_s[0]
+                copy_s.remove(copy_s[0])
+                copy_s.remove(copy_s[-1])
+                list_over.append(firts + last)
+            counts = 0
+            while counts < len(s) // 2:
+                if list_over[counts] in list_answers:
+                    answer_t += 1
+                else:
+                    answer_f += 1
+                counts += 1
+            if answer_t > answer_f:
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+
+print(isValid("({})"))
+print(isValid("{[]}"))
+print(isValid("()[]{}"))
+print(isValid("(]"))
+print(isValid("({})"))
+print(isValid("({[)"))
