@@ -304,3 +304,42 @@
 #
 #     return jumps
 # jump([2,3,1,1,4])
+
+# def jump(nums: list[int]) -> int:
+#     n = len(nums)
+#     jumps = 0         # Количество прыжков
+#     current_end = 0   # Текущая граница прыжка
+#     farthest = 0      # Самая дальняя позиция, до которой можно допрыгнуть
+#
+#     for i in range(n - 1):
+#         # Обновляем самую дальнюю достижимую позицию
+#         farthest = max(farthest, i + nums[i])
+#
+#         # Если мы достигли текущей границы прыжка
+#         if i == current_end:
+#             jumps += 1              # Увеличиваем счётчик прыжков
+#             current_end = farthest  # Обновляем границу для следующего прыжка
+#
+#             # Если уже достигли конца или дальше прыгать не нужно
+#             if current_end >= n - 1:
+#                 break
+#
+#     return jumps
+# print(jump([2,3,1,1,4]))
+
+# def two_numbers(lists,travle):
+#     for i in range(len(lists)):
+#         for j in range(len(lists)):
+#             if lists[i] + lists[j] == travle and i != j:
+#                 return i,j
+# print(two_numbers([2,7,11,15],9))
+#
+
+# def twoSum(self, nums, target: int):
+#     saype = {}
+#     for i in range(len(num)):
+#         saype[nums[i]] = i
+#     for i in range(len(num)):
+#         over_el = target - saype[num[i]]
+#         if over_el in saype and i != saype[i]:
+#             return i, saype[i]
