@@ -343,3 +343,15 @@
 #         over_el = target - saype[num[i]]
 #         if over_el in saype and i != saype[i]:
 #             return i, saype[i]
+
+def addTwoNumbers(l1, l2):
+    l1 = l1[::-1]
+    l2 = l2[::-1]
+    print(l1,l2)
+    l1 = [str(i) for i in l1]
+    l2 = [str(i) for i in l2]
+    over_el = sum(l1,l2)
+    over_el = over_el[::-1]
+    l1 = [int(i) for i in over_el]
+    return l1
+print(addTwoNumbers([2,4,3] ,   [5,6,4]))
