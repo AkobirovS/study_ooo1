@@ -380,3 +380,15 @@
 #     dicts.update(i=lists[i])
 #
 # print(dicts)
+
+
+# def PulsTwoSum(arg1: list,target: int):
+#     shaype = {}
+#     for i in range(len(arg1)):
+#         shaype[arg1[i]] = i
+#     for i in range(len(arg1)):
+#         over_el = target - shaype[arg1[i]]
+#         if over_el in shaype:
+#             return [shaype[i], arg1[over_el-1]]
+#
+# print(PulsTwoSum([1,2,3,4,5,6] , 9))
