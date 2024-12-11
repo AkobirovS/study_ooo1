@@ -1,19 +1,31 @@
-# # class User:
-# #     name = None
-# #     surname = None
-# #     age = None
-# #     level_in_game = None
-# #
-# #     def __init__(self , name , surname , age , level ):
-# #         name = self.name
-# #         surname = self.surname
-# #         age = self.age
-# #         level = self.level_in_game
-# #
-# #
-# # user_1 = User("sardor","akobirov",16,15)
-# #
-# # print(user_1)
+class User:
+    name = ""
+    surname = ""
+    age = ""
+    level_in_game = ""
+    delORG = None
+    def __del__(self, org):
+        self.delORG = "sardor"
+        if type(self.delORG) == str:
+            del self.delORG
+            return f"delOrg was delet {self.delORG}"
+        return f"delOrg was not delet {self.delORG}"
+    def __init__(self , name , surname , age , level ):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        self.level_in_game = level
+
+    def __str__(self):
+        self.delORG = 123
+        print(f"name: {self.age}")
+
+user_1 = User("sardor","akobirov",16,15)
+
+print(user_1.name)
+user_2 = User("suxrob","akobirov",(1982 - 2024),55)
+print(user_2.level_in_game)
+print(user_2.__del__("sardor"))
 # #
 # #
 # # class Student:
