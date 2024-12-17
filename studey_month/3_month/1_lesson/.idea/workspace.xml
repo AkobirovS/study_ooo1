@@ -308,6 +308,9 @@
       <change beforePath="$PROJECT_DIR$/../../../second month/bynry_serach/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../second month/bynry_serach/bynary.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../second month/bynry_serach/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python_konspekt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python_konspekt/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../tg bots/1/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../tg bots/1/.idea/1.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../tg bots/1/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
@@ -324,9 +327,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2qLxu4WfP3bAv6furpWAtcBTzlZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -334,9 +337,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/git_lessons_py_1/studey_month/python_konspekt"
+    "last_opened_file_path": "D:/git_lessons_py_1/studey_month/3_month/1_lesson"
   }
 }]]></component>
   <component name="RunManager">
