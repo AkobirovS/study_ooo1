@@ -68,10 +68,3 @@
 # # date2 = pd.DataFrame(date)
 # # date2.to_excel("1313.xlsx")
 # # print(date)
-
-
-import requests
-
-a = requests.get("https://app.cerebry.co/login").text
-
-print(a)
