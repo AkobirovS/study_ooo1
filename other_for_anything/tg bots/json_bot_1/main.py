@@ -13,7 +13,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart , Command
 from aiogram import F
-from aiogram.types import Message
+from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.filters.state import State, StatesGroup
@@ -82,7 +82,64 @@ async def add_the_description(message: Message, state: FSMContext):
 
 @dp.message(User.file)
 async def add_the_file(message: Message, state: FSMContext):
-    await state.update_data(file=)
+    print(message.document.file_id)
+    await state.update_data(file=message.document.file_id)
+    data = await state.get_data()
+    await message.bot.send_document(chat_id=5412637724, document=message.document.file_id, caption=f"""
+    🆔 User Id: {message.chat.id}
+    👤 User: <em>{data['name']}</em>
+    📫 Group: <i>{data['groups']}</i>
+    📞 Phone: +{data['number']}
+    🔍 Username: @{message.from_user.username}
+    📃 description: <b>{data['description']}</b>
+    """, parse_mode='html', reply_markup=m.marks_button)
+
+    await message.answer("your task will be check",reply_markup=m.start)
+    await state.clear()
+
+
+# @dp.callback_query(lambda call: call.data in [f"{i}-ball" for i in range(1,11)])
+# async def ball_hendler(call: CallbackQuery):
+#
+#     print(call)
+
+
+
+@dp.callback_query(lambda call: call.data in [f"{i}-ball" for i in range(1, 11)])
+async def ball_handler(call: CallbackQuery):
+    # Ensure `call.message` and its attributes exist
+    if not call.message or not call.message.caption:
+        await call.answer("Error: Message or caption missing.", show_alert=True)
+        return
+
+    # Extract the chat ID from the caption (assuming a fixed slice is valid)
+    chat_id = call.message.caption[11:21]
+
+    # Send the document to the extracted chat ID
+    await call.message.bot.send_document(
+        chat_id=int(chat_id),
+        document=call.message.document.file_id,
+        caption=f"Ustoz sizning ushbu vazifangizni <b><i>{call.data}</i></b> bilan baholadilar!",
+        parse_mode='HTML'
+    )
+
+    # Delete the original message
+    await call.message.delete()
+
+    # Send the document to a fixed recipient
+    await call.message.bot.send_document(
+        chat_id=949677905,
+        document=call.message.document.file_id,
+        caption=f"""{call.message.caption}
+
+<b><i>{call.data}</i></b> bilan baholandi """,
+        parse_mode='HTML'
+    )
+
+    # Acknowledge the callback query
+    await call.answer("Message sent successfully!", show_alert=True)
+
+
 
 # @dp.message()
 # async def echo_handler(message: Message) -> None:
