@@ -61,6 +61,7 @@ async def add_the_name(message: Message, state:FSMContext):
     await state.update_data(groups=the_aswer)
     await message.answer("ismizni kiriting")
     await state.set_state(User.name)
+
 @dp.message(User.name)
 async def add_the_name(message:Message, state:FSMContext):
     the_answer = message.text
@@ -106,7 +107,7 @@ async def add_the_file(message: Message, state: FSMContext):
 
 
 @dp.callback_query(lambda call: call.data in [f"{i}-ball" for i in range(1, 11)])
-async def ball_handler(call: CallbackQuery):
+async def ball_handler(call: CallbackQuery,state: FSMContext):
     # Ensure `call.message` and its attributes exist
     if not call.message or not call.message.caption:
         await call.answer("Error: Message or caption missing.", show_alert=True)
@@ -138,6 +139,7 @@ async def ball_handler(call: CallbackQuery):
 
     # Acknowledge the callback query
     await call.answer("Message sent successfully!", show_alert=True)
+    await state.clear()
 
 
 
