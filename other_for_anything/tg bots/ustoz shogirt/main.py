@@ -3,12 +3,13 @@ import logging
 import sys
 import os
 from email.policy import default
+from idlelib.colorizer import prog_group_name_to_tag
 from idlelib.undo import Command
 from lib2to3.fixes.fix_input import context
 from lib2to3.pgen2.tokenize import group
 from os import getenv
 from turtledemo.clock import datum
-
+from dotenv import load_dotenv
 from aiogram.filters.state import State ,StatesGroup
 from aiogram.fsm.context import FSMContext
 from aiogram import Bot, Dispatcher, html,F
@@ -16,11 +17,13 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, Contact, CallbackQuery
+from pyexpat.errors import messages
+from requests.compat import chardet
 import buttons as b
 # Bot token can be obtained via https://t.me/BotFather
 
-# TOKEN = os.getenv("BOT_TOKEN")
-TOKEN = "8045172020:AAHDYFc2tqXJB78Pse1yP6qyOJDvc5duApI"
+load_dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
 # All handlers should be attached to the Router (or Dispatcher)
 
 dp = Dispatcher()
@@ -42,8 +45,6 @@ class User(StatesGroup):
 async def command_start_handler(message: Message,state: FSMContext) -> None:
     await message.answer(f"Assalom Alykum , {message.from_user.full_name}!",reply_markup=b.start_buttons)
     await state.set_state(User.group)
-
-
 @dp.message(Command("help"))
 async def hello(message:Message,state: FSMContext):
     await message.answer("hrll")
@@ -131,6 +132,7 @@ async def chaking(message:Message, state:FSMContext):
     await state.update_data(goat=message.text)
     data = await state.get_data()
     await message.answer(f"""{data['group']}:
+🆔 User Id: {message.chat.id}
 🏅 {data['group']}:  {data["name"]}
 📚 Texnologiya: {data["tex"]}
 🇺🇿 Telegram: {message.chat.full_name}
@@ -149,8 +151,9 @@ async def chakking(message:Message,state:FSMContext):
     data = await state.get_data()
     if data["answer"] == "ha":
         await message.bot.send_message(chat_id=5412637724, text=f"""{data['group']}:
+🆔 User Id: {message.chat.id}
 🏅 {data['group']}:  {data["name"]}
-📚 Texnologiya: {data["tex"]}
+📚 Texnologiya: {data["tex"][:]}
 🇺🇿 Telegram: {message.chat.full_name}
 📞 Aloqa: {data['number']}
 🌐 Hudud: {data["gel"]}
@@ -164,9 +167,21 @@ async def chakking(message:Message,state:FSMContext):
         await message.answer("errore try again")
 
 @dp.callback_query(F.data == "ha")
-async def answer_the_think(call:CallbackQuery):
-    await call.message.answer("hello")
-
+async def answer_the_think(call: CallbackQuery, state: FSMContext):
+    data = await state.get_data()
+    text_user = call.message.text[:]
+    try:
+        await call.message.bot.send_message(chat_id=-4795208813, text=text_user)
+        await call.answer("Сообщение успешно отправлено!")
+    except Exception as e:
+        await call.answer("Произошла ошибка при отправке сообщения.")
+        print(f"Ошибка: {e}")
+    await state.clear()
+    await call.message.bot.send_message(chat_id=call.message.chat.id,text="gabul qilindi !!!")
+@dp.callback_query(F.data == "no")
+async def nots(call:CallbackQuery,state:FSMContext):
+    await call.message.bot.send_message(chat_id=call.message.chat.id, text="qabul qilinmadi (-_-( 😔")
+    await state.clear()
 
 
 async def main() -> None:
