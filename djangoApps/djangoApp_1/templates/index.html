@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,9 +6,45 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
     <title>Document</title>
 </head>
 <body>
-    <h1>hello it is my seventh django app </h1>
+    <div class="main_div">
+        <div class="a">
+            <h1>News 2025 </h1>
+            <br>
+            <h2>There are many info here for me</h1>
+        </div>
+        <br>
+        {% for art in text %}
+        <div class="div">
+            <h1>{{art.name}}</h1>
+            <b>{{art.content}}</b>
+            <small>{{art.time}}</small>
+        </div>
+        {% endfor %}
+    </div>
 </body>
+<style>
+    * { 
+        padding: 0%;
+    }
+    body{
+        height: 100%;   
+        margin: 0; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;    
+    }
+    .main_div {
+
+        width:50%;
+        height: 100%;
+        color:red;
+    }
+    .main_div > .a {
+        color: blue;
+    }
+</style>
 </html>
