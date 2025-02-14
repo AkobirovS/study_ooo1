@@ -9,3 +9,9 @@ class UserAcc(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Blogs(models.Model):
+    title = models.CharField(max_length=200, blank=False)
+    context = models.TextField()
+    time = models.DateTimeField(auto_now=True)
