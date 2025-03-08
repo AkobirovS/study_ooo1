@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content %}
+    <div class="container text-center mt-5">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://media.istockphoto.com/id/1129810557/photo/business-audits-using-a-calculator-financial-data-investment-fund-at-a-workplace-wealth.jpg?s=612x612&w=0&k=20&c=Y9vOqFteksJ-VP__gAMRXfFCAr1V4-jSXmTk65-yQXc=" class="h-50 w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.istockphoto.com/id/1129810557/photo/business-audits-using-a-calculator-financial-data-investment-fund-at-a-workplace-wealth.jpg?s=612x612&w=0&k=20&c=Y9vOqFteksJ-VP__gAMRXfFCAr1V4-jSXmTk65-yQXc=" class="h-50 w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.istockphoto.com/id/1129810557/photo/business-audits-using-a-calculator-financial-data-investment-fund-at-a-workplace-wealth.jpg?s=612x612&w=0&k=20&c=Y9vOqFteksJ-VP__gAMRXfFCAr1V4-jSXmTk65-yQXc=" class="h-50 w-50" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <h2 class="mt-4">В этом сайте вы можете создавать разные заметки в ноутбуке</h2>
+
+        <a href="{%url 'main:blogs'%}" class="btn btn-primary" type="button">Enter the our blogs</a>
+    </div>
+<!--<div class="container">-->
+<!--    -->
+<!--    <div class="d-grid gap-2">-->
+<!--        <a class="btn btn-primary" type="button">Enter the our blogs</a>-->
+<!--    </div>-->
+
+<!--</div>-->
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+<div class="container">
+    <h1>the blogs</h1>
+    <div class="row">
+        {%for i in date%}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                      <img src="{{i.image.url}}" width="100%">
+                    <h5 class="card-title">{{i.title}}</h5>
+                    <p class="card-text">{{i.content}}</p>
+                      <code>{{i.create_at}}</code>
+                      <a href="{% url 'main:detail' i.pk %}" class="btn btn-primary">detail</a>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
