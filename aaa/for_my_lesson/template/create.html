@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5"> <!-- Добавил контейнер и отступ сверху -->
+        <div class="row justify-content-center"> <!-- Центрируем содержимое -->
+            <div class="col-md-6"> <!-- Ограничиваем ширину -->
+                <figure class="text-center"> <!-- Делаем заголовок по центру -->
+                    <blockquote class="blockquote">
+                        <p class="h3">Create Article</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <a href="{% url 'main:blogs' %}">Home</a>
+                    </figcaption>
+                </figure>
+
+                <div class="card shadow-lg p-4"> <!-- Добавил карточку с тенью -->
+                    <form action="" method="POST" action="{% url 'main:create' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" name="title" class="form-control" id="title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Default file input example</label>
+                            <input class="form-control" type="file" name="image" id="formFile">
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="content" class="form-control" id="exampleFileImage" rows="4" required></textarea>
+                            <label for="exampleFileImage" class="form-label" >Content</label>
+                        </div>
+                        <div class="text-center"> <!-- Центрируем кнопку -->
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
