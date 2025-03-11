@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{%load static%}
+
+{% block content %}
+
+<div class="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 p-3">
+    <div class="card shadow-lg rounded-4 w-50 animate-fade-in">
+        <div class="card-header bg-danger text-white text-center fw-bold fs-4 rounded-top-4">
+            Are you sure?
+        </div>
+        <div class="card-body text-center p-4">
+            <p class="text-muted mb-3">
+                Are you sure you want to delete the article
+                <span class="fw-bold">"Title :: {{date.title}}"</span>? This action cannot be undone.
+            </p>
+
+            <div class="bg-light p-3 rounded mb-3">
+                <h5 class="fw-semibold">Summary</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>Articles: 1</li>
+                </ul>
+            </div>
+
+            <div class="bg-light p-3 rounded">
+                <h5 class="fw-semibold">Objects</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>Article: <span class="fw-bold">Title :: asdfsf</span></li>
+                </ul>
+            </div>
+        </div>
+            <form action="" method="post">
+                {%csrf_token%}
+                <div class="card-footer d-flex justify-content-between p-3 bg-light rounded-bottom-4">
+                <a href="{%url 'main:blogs'%}" class="btn btn-secondary w-50 me-2 fw-semibold">Cancel</a>
+                <input type="submit" class="btn btn-primary w-50 fw-semibold" value="i agree">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

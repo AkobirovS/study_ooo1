@@ -17,8 +17,9 @@
                     <form action="" method="POST" action="{% url 'main:create' %}">
                         {% csrf_token %}
                         <div class="mb-3">
-                            <label for="title" class="form-label">Title</label>
-                            <input type="text" name="title" class="form-control" id="title" required>
+<!--                            <label for="title" class="form-label">Title</label>-->
+<!--                            <input type="text" name="title" class="form-control" id="title" required>-->
+                            {{form.title}}
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Default file input example</label>

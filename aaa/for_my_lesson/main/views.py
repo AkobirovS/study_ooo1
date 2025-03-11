@@ -1,6 +1,9 @@
+from pyexpat.errors import messages
+
 from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from .models import Article
+from .forms import ArticleForm
 
 def base(request):
     context = {"date":Article}
@@ -25,9 +28,32 @@ def detail(request, pk):
     content = {'data':all_objects}
 
     return render(request,"detail.html",content)
+#
+# def createE(request):
+#     context = {}
+#     if request.method == "POST":
+#         Article.objects.create(title=request.POST['title'],content=request.POST['content'],image=request.POST['image'])
+#     return render(request,'create.html',context)
 
 def create(request):
-    context = {}
+    data = Article.objects.all()
+    form = ArticleForm(request.POST, files=request.FILES)
     if request.method == "POST":
-        Article.objects.create(title=request.POST['title'],content=request.POST['content'],image=request.POST['image'])
+        if form.is_valid():
+            form.save()
+            return redirect('main;blogs')
+        messages.succ
+    context = {
+        'data': data,
+        "form": form
+    }
     return render(request,'create.html',context)
+
+def delete(request,pk):
+    article = Article.objects.get(id=pk)
+    context = {"date":article}
+
+    if request.method == 'POST':
+        article.delete()
+        return redirect("main:blogs")
+    return render(request,'delete.html',context)
